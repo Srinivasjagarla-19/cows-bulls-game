@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cows & Bulls - Word Game</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body class="dark-mode">
+    
+    <div id="toast" class="toast" role="alert"></div>
+    
+    <div class="game-wrapper">
+        <div class="game-header">
+            <div class="title-section">
+                <h1>🐮 Cows & Bulls 🐂</h1>
+                <p class="subtitle">Word Game <i class="fas fa-info-circle info-icon" title="How to Play:
+                    🎯 Guess the secret word (4-5 letters, no repeating letters)
+                    🐂 Bull = correct letter in correct position
+                    🐄 Cow = correct letter in wrong position
+                    
+                    Example: If secret word is 'GAME'
+                    Guess 'GATE' = 2 Bulls (G,E) + 0 Cows"></i></p>
+                <div class="timer-section">
+                    <div id="displayTimer">00:00:00</div>
+                    <div class="timer-controls">
+                        <button id="startBtn" class="control-btn primary">Start Game</button>
+                        <button id="resetBtn" class="control-btn secondary" disabled>Reset Game</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="persistent-clock" id="persistent-clock">
+                <span id="p-time">12:00:00 AM</span>
+                <button id="themeToggle" class="theme-toggle">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+            <div class="scoreboard">
+                <div class="team team-a">
+                    <h3>Team A</h3>
+                    <p>Score: <span id="scoreA">0</span></p>
+                </div>
+                <div class="vs-badge">
+                    <i class="fas fa-gamepad"></i>
+                </div>
+                <div class="team team-b">
+                    <h3>Team B</h3>
+                    <p>Score: <span id="scoreB">0</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="game-container">
+            <div class="game-setup" id="gameSetup">
+                <div class="setup-content">
+                    <h2 class="white-text">Select Word Length </h2>
+                    <div class="word-length-buttons">
+                        <button class="word-btn" data-length="4">4 Letters</button>
+                        <button class="word-btn" data-length="5">5 Letters</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="teams-container">
+                <div class="team-panel team-a-panel">
+                    <h3>Team A</h3>
+                    <div class="team-input">
+                        <input type="text" id="teamAInput" class="team-guess-input" placeholder="Enter guess" maxlength="5" disabled>
+                        <button id="teamAGuess" class="team-guess-btn" disabled>Guess!</button>
+                    </div>
+                    <div class="team-history" id="teamAHistory"></div>
+                </div>
+                
+                <div class="team-panel team-b-panel">
+                    <h3>Team B</h3>
+                    <div class="team-input">
+                        <input type="text" id="teamBInput" class="team-guess-input" placeholder="Enter guess" maxlength="5" disabled>
+                        <button id="teamBGuess" class="team-guess-btn" disabled>Guess!</button>
+                    </div>
+                    <div class="team-history" id="teamBHistory"></div>
+                </div>
+            </div>
+            
+            <div class="word-info">
+                <p class="current-team">Current <span id="currentTeam">Team: A</span></p>
+            </div>
+
+            <div id="winnerModal" class="modal">
+                <div class="modal-content">
+                    <h2>🎉 Congratulations! 🎉</h2>
+                    <p id="winnerMessage"></p>
+                    <button id="nextRoundBtn" class="control-btn">Rematch</button>
+                </div>
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
