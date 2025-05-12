@@ -1,30 +1,39 @@
-# Cows and Bulls Game
+🐂 Cows and Bulls Game 🐄
+A web-based twist on the classic Cows and Bulls word-guessing game! Two teams compete to crack the secret word using logic, deduction, and a bit of luck. After each guess, players receive feedback in the form of bulls (correct letter, correct position) and cows (correct letter, wrong position).
 
-A web-based implementation of the classic Cows and Bulls word guessing game. Players take turns trying to guess a secret word, receiving feedback in the form of "bulls" (correct letter in correct position) and "cows" (correct letter in wrong position).
+🎮 Features
+🔁 Two-team gameplay: Team A vs Team B
 
-## Features
+🔠 Word length selection: 4-letter or 5-letter words
 
-- Two-team gameplay (Team A vs Team B)
-- Support for 4 and 5 letter words
-- Score tracking
-- Game history
-- Timer functionality
-- Light/Dark theme toggle
-- Local storage for game history
-- Toast notifications for game events
+🧮 Score tracking per round
 
-## How to Play
+🕓 Built-in timer for each turn
 
-1. Select word length (4 or 5 letters)
-2. Teams take turns guessing the word
-3. After each guess, players receive feedback:
-   - 🐂 Bulls: Correct letters in correct positions
-   - 🐄 Cows: Correct letters in wrong positions
-4. The team that guesses the word correctly wins the round
+💾 Local storage for persistent game history
 
-## Technologies Used
+🌗 Light/Dark mode toggle
 
-- HTML
-- CSS
-- JavaScript
-- Local Storage for data persistence
+🔔 Toast notifications for game events
+
+🕹️ How to Play
+Choose a word length (4 or 5 letters)
+
+Teams take turns to guess the secret word
+
+After each guess, the team receives feedback:
+
+🐂 Bulls – Correct letters in the correct positions
+
+🐄 Cows – Correct letters in the wrong positions
+
+The team that guesses the word correctly wins the round!
+
+🛠️ Technologies Used
+HTML – Structure of the web game
+
+CSS – Styling for light/dark themes and layout
+
+JavaScript – Core game logic and UI interactions
+
+Local Storage – Saving history and game progress
