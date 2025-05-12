@@ -86,6 +86,7 @@ function startNewGame(wordLength) {
     }
 }
 
+
 function updateTeamInputs() {
     const elements = ['A', 'B'].map(team => ({
         input: document.getElementById(`team${team}Input`),
