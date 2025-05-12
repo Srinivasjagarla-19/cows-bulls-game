@@ -1,39 +1,28 @@
-🐂 Cows and Bulls Game 🐄
-A web-based twist on the classic Cows and Bulls word-guessing game! Two teams compete to crack the secret word using logic, deduction, and a bit of luck. After each guess, players receive feedback in the form of bulls (correct letter, correct position) and cows (correct letter, wrong position).
+🐂 **Cows and Bulls Game** 🐄  
+A web-based twist on the classic Cows and Bulls word-guessing game! Two teams compete to crack the secret word using logic, deduction, and a bit of luck. After each guess, players receive feedback in the form of bulls (correct letter, correct position) and cows (correct letter, wrong position).  
+<br>
 
-🎮 Features
-🔁 Two-team gameplay: Team A vs Team B
+🎮 **Features**  
+🔁 Two-team gameplay: Team A vs Team B<br>  
+🔠 Word length selection: 4-letter or 5-letter words<br>  
+🧮 Score tracking per round<br>  
+🕓 Built-in timer for each turn<br>  
+💾 Local storage for persistent game history<br>  
+🌗 Light/Dark mode toggle<br>  
+🔔 Toast notifications for game events<br>  
+<br>
 
-🔠 Word length selection: 4-letter or 5-letter words
+🕹️ **How to Play**  
+1. Choose a word length (4 or 5 letters)<br>  
+2. Teams take turns to guess the secret word<br>  
+3. After each guess, the team receives feedback:<br>  
+&nbsp;&nbsp;&nbsp;&nbsp;🐂 Bulls – Correct letters in the correct positions<br>  
+&nbsp;&nbsp;&nbsp;&nbsp;🐄 Cows – Correct letters in the wrong positions<br>  
+4. The team that guesses the word correctly wins the round!<br>  
+<br>
 
-🧮 Score tracking per round
-
-🕓 Built-in timer for each turn
-
-💾 Local storage for persistent game history
-
-🌗 Light/Dark mode toggle
-
-🔔 Toast notifications for game events
-
-🕹️ How to Play
-Choose a word length (4 or 5 letters)
-
-Teams take turns to guess the secret word
-
-After each guess, the team receives feedback:
-
-🐂 Bulls – Correct letters in the correct positions
-
-🐄 Cows – Correct letters in the wrong positions
-
-The team that guesses the word correctly wins the round!
-
-🛠️ Technologies Used
-HTML – Structure of the web game
-
-CSS – Styling for light/dark themes and layout
-
-JavaScript – Core game logic and UI interactions
-
-Local Storage – Saving history and game progress
+🛠️ **Technologies Used**  
+- **HTML** – Structure of the web game<br>  
+- **CSS** – Styling for light/dark themes and layout<br>  
+- **JavaScript** – Core game logic and UI interactions<br>  
+- **Local Storage** – Saving history and game progress<br>
