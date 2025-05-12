@@ -61,6 +61,7 @@ function startNewGame(wordLength) {
         gameState.currentTeam = 'A';
         gameState.attempts = { A: 0, B: 0 };
         gameState.history = [];
+        gameState.wordLength = wordLength;
 
         document.getElementById('gameSetup').style.display = 'none';
         
@@ -119,8 +120,13 @@ function updateTeamInputs() {
     elements.forEach(({input}, index) => {
         const team = ['A', 'B'][index];
         if (input) {
-            input.placeholder = gameState.currentTeam === team ? 
-                `Enter ${gameState.wordLength}-letter word` : 'Wait for your turn';
+            if (!gameState.isActive || !gameState.wordLength) {
+                input.placeholder = 'Select word length to start';
+            } else if (gameState.currentTeam === team) {
+                input.placeholder = `Enter ${gameState.wordLength}-letter word`;
+            } else {
+                input.placeholder = 'Wait for your turn';
+            }
         }
     });
 }
@@ -394,7 +400,6 @@ function resetForNextRound() {
     gameState.isActive = false;
     gameState.attempts = { A: 0, B: 0 };
     gameState.history = [];
-    gameState.currentTeam = 'A';
 
     document.getElementById('teamAHistory').innerHTML = '';
     document.getElementById('teamBHistory').innerHTML = '';
@@ -402,13 +407,21 @@ function resetForNextRound() {
     document.getElementById('teamAInput').value = '';
     document.getElementById('teamBInput').value = '';
 
-    resetStopwatch();
-    updateTeamInputs();
-
-    const currentTeamSpan = document.getElementById('currentTeam');
-    if (currentTeamSpan) {
-        currentTeamSpan.textContent = 'Team A';
+    if (gameState.roundStarter === 'A') {
+        gameState.roundStarter = 'B';
+        gameState.currentTeam = 'B';
+    } else {
+        gameState.roundStarter = 'A';
+        gameState.currentTeam = 'A';
     }
+
+    if (isRunning) {
+        stopStopwatch();
+        startStopwatch();
+    }
+
+    updateTeamInputs();
+    showToast(`Round ${gameState.round}! Team ${gameState.currentTeam} starts!`, 'info');
 }
 
 function startStopwatch() {
