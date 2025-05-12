@@ -1,5 +1,5 @@
 🐂 **Cows and Bulls Game** 🐄  <br>
-Live demo : https://srinivasjagarla-19.github.io/cows-bulls-game/
+Live demo : https://srinivasjagarla-19.github.io/cows-bulls-game/<br>
 A web-based twist on the classic Cows and Bulls word-guessing game! Two teams compete to crack the secret word using logic, deduction, and a bit of luck. After each guess, players receive feedback in the form of bulls (correct letter, correct position) and cows (correct letter, wrong position).  
 <br>
 
